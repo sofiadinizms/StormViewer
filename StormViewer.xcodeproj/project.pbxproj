@@ -83,14 +83,6 @@
 				BD459F222A97CB92003C616C /* Assets.xcassets */,
 				BD459F242A97CB92003C616C /* LaunchScreen.storyboard */,
 				BD459F272A97CB92003C616C /* Info.plist */,
-				BD459F2F2A97CBF7003C616C /* Content */,
-			);
-			path = StormViewer;
-			sourceTree = "<group>";
-		};
-		BD459F2F2A97CBF7003C616C /* Content */ = {
-			isa = PBXGroup;
-			children = (
 				BD459F302A97CBF7003C616C /* nssl0049.jpg */,
 				BD459F312A97CBF7003C616C /* nssl0046.jpg */,
 				BD459F322A97CBF7003C616C /* nssl0091.jpg */,
@@ -101,6 +93,14 @@
 				BD459F372A97CBF7003C616C /* nssl0043.jpg */,
 				BD459F382A97CBF7003C616C /* nssl0033.jpg */,
 				BD459F392A97CBF7003C616C /* nssl0034.jpg */,
+				BD459F2F2A97CBF7003C616C /* Content */,
+			);
+			path = StormViewer;
+			sourceTree = "<group>";
+		};
+		BD459F2F2A97CBF7003C616C /* Content */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Content;
 			sourceTree = "<group>";

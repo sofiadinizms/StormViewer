@@ -15,8 +15,6 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        navigationItem.title = "Storm Viewer"
         /// declares a constant called fm and assigns it the value returned by FileManager.default. This is a data type that lets us work with the filesystem, and in our case we'll be using it to look for files.
         let fm = FileManager.default
         
@@ -29,8 +27,10 @@ class ViewController: UITableViewController {
         for item in items{
             if item.hasPrefix("nssl"){
                 pictures.append(item)
+                print(item)
             }
         }
+        
     
     }
     
