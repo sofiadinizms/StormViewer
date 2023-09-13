@@ -56,8 +56,13 @@ class ViewController: UITableViewController {
         
         return cell
     }
-    
+    /// takes an IndexPath value just like cellForRowAt that tells us what row we’re working with and loads a DetailViewController from the storyboard.
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        ///When we created the detail view controller, you gave it the storyboard ID “Detail”, which allows us to load it from the storyboard using a method called instantiateViewController(withIdentifier:). Every view controller has a property called storyboard that is either the storyboard it was loaded from or nil. In the case of ViewController it will be Main.storyboard, which is the same storyboard that contains the detail view controller, so we’ll be loading from there.
+        ///The first of those is done by calling instantiateViewController, but it has two small complexities. First, we call it on the storyboard property that we get from Apple’s UIViewController type, but it’s optional because Swift doesn’t know we came from a storyboard. So, we need to use ? just like when we were setting the text label of our cell: “try doing this, but do nothing if there was a problem.”
+        ///Second, even though instantiateViewController() will send us back a DetailViewController if everything worked correctly, Swift thinks it will return back a UIViewController because it can’t see inside the storyboard to know what’s what.
+        
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController{
             vc.selectedImage = pictures[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
