@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +11,6 @@
         <!--View Controller-->
         <scene sceneID="iwg-LX-XiG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C86-I2-0za" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="vIq-fQ-mm8" customClass="ViewController" customModule="StormViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="zCe-ad-364">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -42,8 +42,38 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="wdf-F2-2dw"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C86-I2-0za" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1101.5267175572519" y="19.718309859154932"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="V6r-4f-sIs">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="vlU-Z0-DV5" customClass="DetailViewController" customModule="StormViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K4v-Cp-CAk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QbS-0W-UHz">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gj2-Us-gU0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QbS-0W-UHz" firstAttribute="centerY" secondItem="K4v-Cp-CAk" secondAttribute="centerY" id="BlG-yU-YeW"/>
+                            <constraint firstItem="QbS-0W-UHz" firstAttribute="leading" secondItem="gj2-Us-gU0" secondAttribute="leading" id="Ptc-AR-l5E"/>
+                            <constraint firstItem="QbS-0W-UHz" firstAttribute="top" secondItem="K4v-Cp-CAk" secondAttribute="topMargin" constant="-59" id="bll-JZ-qa5"/>
+                            <constraint firstItem="QbS-0W-UHz" firstAttribute="centerX" secondItem="K4v-Cp-CAk" secondAttribute="centerX" id="zaH-rd-rCe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="QbS-0W-UHz" id="Anj-CU-5Un"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E3w-Tg-Ha5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1939.6946564885495" y="26.760563380281692"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="six-If-1Ce">
